@@ -17,7 +17,7 @@ mongoose.connect(mongoDb, {useNewUrlParser:true}).then(()=>{
 })
 
 app.get("/", (req, res)=>{
-    res.send("Hello")
+    res.status(200).json({message:"Welcome to e-commerce api",status:true})
 })
 const userRoutes= require("./src/views/views")
 app.use("/api", userRoutes)

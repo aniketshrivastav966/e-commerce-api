@@ -73,4 +73,37 @@ const CartSchema = mongoose.Schema({
 })
 const Cart = mongoose.model("Cart", CartSchema)
 
+const ProductSchema=mongoose.Schema({
+    admin:{
+        type:ObjectID,
+        required:true,
+        ref:"User"
+    },
+    productName :{
+        type:String,
+        required:true
+    },
+    category :{
+        type:String,
+        required:true
+    },
+    image :{
+        type:String,
+        required:true
+    },
+    productDescription :{
+        type:String,
+        required:true
+    },
+    productProperties :{
+        type:String,
+        required:true
+    },
+    price:{
+        type:Number,
+        required:true
+    }
+    
+})
+Product=mongoose.model("Product", ProductSchema)
 module.exports = {User, Item, Cart};
