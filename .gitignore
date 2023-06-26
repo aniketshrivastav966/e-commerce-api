@@ -1,4 +1,4 @@
 # ignore files or folders
-/nodemodules
-/.env
-/package-lock.json
+/ nodemodules
+/ .env
+/ package-lock.json
